@@ -3,7 +3,7 @@ from typing import List
 def selectionSort(array, size) -> List[int]:
   # Write your code here
   for j in range(size-1):
-    min =arr[j]
+    min =array[j]
     minpos=j
     for i in range(1,size):
       if array[j]<min:
