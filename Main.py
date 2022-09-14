@@ -2,22 +2,23 @@ from typing import List
 
 def selectionSort(array, size) -> List[int]:
   # Write your code here
-  for j in range(size-1):
-    min =array[j]
-    minpos=j
-    for i in range(1,size):
-      if array[j]>min:
-        min =array[i]
+  for i in range(size-1):
+    min=array[i]
+    minpos=i
+    for j in range(i,size): 
+      if array[j]<min:
+        min=array[j]
         minpos=j
     temp=array[i]
     array[i]=min
     array[minpos]=temp
-  return array 
+  return array  
+      
 
 # Do not change the following code
-in_data = input()
+input_data = input()
 data = []
-for item in in_data.split(', '):
+for item in input_data.split(', '):
   if item.isnumeric():
     data.append(int(item))
   elif item.lstrip("-").isnumeric():
