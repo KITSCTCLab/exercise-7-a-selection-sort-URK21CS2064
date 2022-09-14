@@ -6,7 +6,7 @@ def selectionSort(array, size) -> List[int]:
     min =array[j]
     minpos=j
     for i in range(1,size):
-      if array[j]<min:
+      if array[j]>min:
         min =array[i]
         minpos=j
     temp=array[i]
